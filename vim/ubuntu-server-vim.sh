@@ -1,5 +1,4 @@
-# Intended to be run as a standalone script (i.e. in current directory)
-SCRIPTDIR=.
+SCRIPTDIR=vim
 VIMDIR=~/.vim
 
 ############################################
@@ -8,7 +7,7 @@ VIMDIR=~/.vim
 sudo apt-get --assume-yes install vim
 
 # Just in case it doesn't exist
-mkdir $VIMDIR
+sudo mkdir $VIMDIR
 
 sudo chown -R $(who am i | awk '{print $1}'):$(who am i | awk '{print $1}') .vim
 
