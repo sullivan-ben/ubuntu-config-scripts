@@ -3,7 +3,7 @@
 OUTPUT_FILE=/tmp/config-log.txt
 
 echo "Running setup..." >> $OUTPUT_FILE
-echo "\n" >> $OUTPUT_FILE
+echo $'\n' >> $OUTPUT_FILE
 
 ./general/ubuntu-server.sh
 ./vim/ubuntu-server-vim.sh
