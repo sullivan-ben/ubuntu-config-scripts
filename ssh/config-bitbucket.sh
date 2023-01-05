@@ -11,7 +11,7 @@ fi;
 
 cd ~/.ssh
 
-ssh-keygen -f bitbucket_rsa -t rsa
+ssh-keygen -f bitbucket_rsa -t rsa -N ""
 
 touch config
 

@@ -11,7 +11,7 @@ fi;
 
 cd ~/.ssh
 
-ssh-keygen -f github_rsa -t rsa -b 4096
+ssh-keygen -f github_rsa -t rsa -b 4096 -N ""
 
 touch config
 

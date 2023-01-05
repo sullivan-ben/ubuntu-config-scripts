@@ -11,7 +11,7 @@ fi;
 
 cd ~/.ssh
 
-ssh-keygen -f gitlab_rsa -t rsa
+ssh-keygen -f gitlab_rsa -t rsa -N ""
 
 touch config
 
