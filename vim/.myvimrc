@@ -1,0 +1,53 @@
+color molokai
+set t_Co=256
+
+"highlights the current cursor line
+set cursorline
+highlight ColorColumn ctermbg=234
+
+"add automatic saving of code folds
+let &viewdir=expand("$HOME") . "/.bk/.vim.viewdir"
+if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
+
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+" Adds line numbering
+set number
+" changes line numbering to be relative to the current cursor
+"set relativenumber
+
+function! ToggleLineNumbers()
+	set number!
+
+	if &number
+		set relativenumber
+	else
+		set norelativenumber
+	endif
+endfunction
+
+command Togglelinenumbers :call ToggleLineNumbers()
+command Tnu :Togglelinenumbers
+
+" Set undo levels
+set undolevels=1000
+
+" Set auto indent
+set ai
+
+" Fix tabs
+"set softtabstop=0 noexpandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Allow some cheeky mouse edits
+set mouse=a
+
+" Map Ctrl+Direction Key to navigate window splits
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
