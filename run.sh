@@ -5,20 +5,20 @@ OUTPUT_FILE=/tmp/config-log.txt
 echo "Running setup..." >> $OUTPUT_FILE
 echo $'\n' >> $OUTPUT_FILE
 
-./general/ubuntu-server.sh
-./vim/ubuntu-server-vim.sh
-./zsh/ubuntu-zsh-generic.sh
+sudo -E ./general/ubuntu-server.sh
+sudo -E ./vim/ubuntu-server-vim.sh
+sudo -E ./zsh/ubuntu-zsh-generic.sh
 
-./ssh/config-bitbucket.sh $OUTPUT_FILE
+sudo -E ./ssh/config-bitbucket.sh $OUTPUT_FILE
 echo $'\n' >> $OUTPUT_FILE
 
-./ssh/config-github.sh $OUTPUT_FILE
+sudo -E ./ssh/config-github.sh $OUTPUT_FILE
 echo $'\n' >> $OUTPUT_FILE
 
-./ssh/config-gitlab.sh $OUTPUT_FILE
+sudo -E ./ssh/config-gitlab.sh $OUTPUT_FILE
 echo $'\n' >> $OUTPUT_FILE
 
-./ssh/config-lan-known-hosts.sh
+sudo -E ./ssh/config-lan-known-hosts.sh
 
 echo "Setup complete" >> $OUTPUT_FILE
 
