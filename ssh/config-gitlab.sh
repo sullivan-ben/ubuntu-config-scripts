@@ -25,8 +25,8 @@ if [ ! -n "$1" ]; then
    echo "Copy the following into a new ssh key (https://gitlab.com/-/profile/keys):"
    cat gitlab_rsa.pub
 else
-   echo "Copy the following into a new ssh key (https://gitlab.com/-/profile/keys):" | sudo tee -a $1
-   cat gitlab_rsa.pub | sudo tee -a $1
+   echo "Copy the following into a new ssh key (https://gitlab.com/-/profile/keys):" >> $1
+   cat gitlab_rsa.pub >> $1
 fi
 
 echo "gitlab keys created"

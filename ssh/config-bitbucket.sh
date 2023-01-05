@@ -26,8 +26,8 @@ if [ ! -n "$1" ]; then
    echo "Copy the following into a new ssh key on bitbucket (https://bitbucket.org/account/user):"
    cat bitbucket_rsa.pub
 else
-   echo "Copy the following into a new ssh key on bitbucket (https://bitbucket.org/account/user):" | sudo tee -a $1
-   cat bitbucket_rsa.pub | sudo tee -a $1
+   echo "Copy the following into a new ssh key on bitbucket (https://bitbucket.org/account/user):" >> $1 
+   cat bitbucket_rsa.pub >> $1
 fi
 
 echo "bitbucket keys created"

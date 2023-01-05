@@ -26,8 +26,8 @@ if [ ! -n "$1" ]; then
    echo "Copy the following into a new key on github (https://github.com/settings/keys):"
    cat github_rsa.pub
 else
-   echo "Copy the following into a new key on github (https://github.com/settings/keys):" | sudo tee -a $1
-   cat github_rsa.pub | sudo tee -a $1
+   echo "Copy the following into a new key on github (https://github.com/settings/keys):" >> $1
+   cat github_rsa.pub >> $1
 fi
 
 echo "github keys created"
