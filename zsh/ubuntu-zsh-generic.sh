@@ -14,7 +14,7 @@ if [ ! -n "$ZSH" ]; then
     ZSH=~/.oh-my-zsh
 fi
 
-git clone git@github.com:ohmyzsh/ohmyzsh.git $ZSH
+git clone https://github.com/ohmyzsh/ohmyzsh.git $ZSH
 
 # Create a new zsh config file by copying the supplied template
 cp $ZSH/templates/zshrc.zsh-template ~/.zshrc
