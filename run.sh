@@ -1,9 +1,9 @@
 #! /bin/bash
 
-OUTPUT_FILE=/tmp/config-log.txt
+mkdir /tmp/script-output
+OUTPUT_FILE=/tmp/script-output/log.txt
 
 touch $OUTPUT_FILE
-chmod a+w $OUTPUT_FILE
 
 echo "Running setup..." >> $OUTPUT_FILE
 echo $'\n' >> $OUTPUT_FILE
