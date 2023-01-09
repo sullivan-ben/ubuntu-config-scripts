@@ -34,7 +34,7 @@ cp ~/.oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/bensullivan.zsh-th
 sed -i 's/prompt_segment blue/prompt_segment yellow/g' ~/.oh-my-zsh/themes/bensullivan.zsh-theme
 
 # download custom directory colours
-git clone git@github.com:huyz/dircolors-solarized.git ~/.dircolors
+git clone https://github.com/huyz/dircolors-solarized.git ~/.dircolors
 sed -i '$a eval `dircolors ~/.dircolors/dircolors.256dark`' ~/.zshrc
 
 # required for the aggnoster theme
