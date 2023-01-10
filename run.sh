@@ -23,6 +23,9 @@ echo $'\n' >> $OUTPUT_FILE
 
 sudo -E ./ssh/config-lan-known-hosts.sh
 
+# To work correctly, ssh files must be owner/group of original user, not sudo
+sudo -E chown -R $(who am i | awk '{print $1}'):$(who am i | awk '{print $1}') ~/.ssh/*
+
 echo "Setup complete" >> $OUTPUT_FILE
 
 cat $OUTPUT_FILE
